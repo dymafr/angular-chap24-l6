@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.userService.fetchUsers().subscribe((users: User[]) => {
       this.dataSource.data = users;
+      this.dataSource.paginator = this.paginateur;
     });
   }
 }
